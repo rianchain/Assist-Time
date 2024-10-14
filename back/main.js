@@ -6,6 +6,7 @@ let timer;
         let sessions = JSON.parse(localStorage.getItem('pomodoroSessions')) || [];
         let startTime;
         let audioContext;
+        let chart;
 
         function startTimer() {
             clearInterval(timer);
@@ -107,7 +108,11 @@ let timer;
             let ctx = document.getElementById('statsChart').getContext('2d');
             let chartData = processDataForChart();
 
-            new Chart(ctx, {
+            if (chart) {
+                chart.destroy();
+            }
+
+            chart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: chartData.labels,
