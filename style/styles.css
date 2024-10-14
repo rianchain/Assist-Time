@@ -1,46 +1,88 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f0f4f8;
     color: #333;
     line-height: 1.6;
     padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 .container {
     background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+    text-align: center;
 }
 h1, h2 {
     color: #2c3e50;
+    margin-bottom: 20px;
+}
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-group label {
+    flex: 1;
+    margin-right: 10px;
+}
+input[type="number"] {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
 }
 button {
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
+    padding: 12px 20px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    font-size: 16px;
+    margin: 5px;
 }
 button:hover {
     background-color: #2980b9;
 }
-input[type="number"] {
-    width: 60px;
-    padding: 5px;
-    margin-right: 10px;
+button:active {
+    transform: scale(0.98);
 }
 #timer {
-    font-size: 2em;
-    margin: 20px 0;
+    font-size: 3em;
+    margin: 30px 0;
+    font-weight: bold;
+    color: #2c3e50;
+}
+#status {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 #statistics {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 canvas {
     max-width: 100%;
     height: auto;
+    margin-top: 20px;
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    input[type="number"] {
+        width: 50px;
+    }
+    button {
+        padding: 10px 15px;
+    }
 }
