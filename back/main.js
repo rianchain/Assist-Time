@@ -16,6 +16,7 @@ let timer;
             startTime = new Date();
             updateTimer();
             timer = setInterval(updateTimer, 1000);
+            document.getElementById('status').textContent = 'Waktu kerja berjalan';
         }
 
         function stopTimer() {
@@ -72,7 +73,7 @@ let timer;
             gainNode.connect(audioContext.destination);
 
             oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(440, audioContext.currentTime); // 440 Hz = A4 note
+            oscillator.frequency.setValueAtTime(440, audioContext.currentTime);
 
             gainNode.gain.setValueAtTime(0, audioContext.currentTime);
             gainNode.gain.linearRampToValueAtTime(1, audioContext.currentTime + 0.01);
@@ -92,12 +93,14 @@ let timer;
             });
             localStorage.setItem('pomodoroSessions', JSON.stringify(sessions));
             updateChart();
+            alert('Sesi berhasil disimpan!');
         }
 
         function clearData() {
             localStorage.removeItem('pomodoroSessions');
             sessions = [];
             updateChart();
+            alert('Data berhasil dihapus!');
         }
 
         function updateChart() {
