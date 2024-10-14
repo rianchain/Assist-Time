@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #2c3e50;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #2980b9;
+}
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin-right: 10px;
+}
+#timer {
+    font-size: 2em;
+    margin: 20px 0;
+}
+#statistics {
+    margin-top: 30px;
+}
+canvas {
+    max-width: 100%;
+    height: auto;
+}
